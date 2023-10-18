@@ -1,22 +1,22 @@
 #include "main.h"
-/**
- * _getline_command -  GEts inputs
- * Return: The input.
- */
 
+/**
+ * _getline_command - Get user input from standard input
+ * Return: The user's input.
+ */
 char *_getline_command(void)
 {
-	char *lineptr = NULL;
-	size_t charter_user = 0;
+	char *input_line = NULL;
+	size_t line_buffer_size = 0;
 
 	if (isatty(STDIN_FILENO))
 		write(STDOUT_FILENO, "$ ", 2);
 
-	if (getline(&lineptr, &charter_user, stdin) == -1)
+	if (getline(&input_line, &line_buffer_size, stdin) == -1)
 	{
-		free(lineptr);
+		free(input_line);
 		return (NULL);
 	}
 
-	return (lineptr);
+	return (input_line);
 }
