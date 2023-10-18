@@ -10,6 +10,8 @@
 #include <sys/stat.h>
 #include <errno.h>
 
+int lsh_setenv(char **args);
+int lsh_unsetenv(char **args);
 
 int lsh_ctrld(char **args);
 int lsh_cd(char **args);
