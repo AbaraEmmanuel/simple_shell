@@ -12,11 +12,9 @@
 
 int lsh_setenv(char **args);
 int lsh_unsetenv(char **args);
-
 int lsh_ctrld(char **args);
 int lsh_cd(char **args);
 int lsh_help(char **args);
-extern char **environ;
 int lsh_exit(char **args);
 int _strcmp(char *s1, char *s2);
 size_t _strncmp(char *s1, char *s2, size_t n);
@@ -31,8 +29,6 @@ char *_getline_command(void);
 void _getenv(char **env);
 char **tokenize(char *lineptr);
 void _exit_command(char **args, char *lineptr, int _exit);
-int _fork_fun(char **arg, char **av, char **env,
-char *lineptr, int np, int c);
-
+int _fork_fun(char **arg, char **av, char **env, char *lineptr, int np, int c);
 
 #endif
