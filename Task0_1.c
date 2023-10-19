@@ -7,7 +7,7 @@
  * Return: Always returns 0.
  */
 int main(int ac, char **argv) {
-    char *prompt = "emmanuel@DESKTOP-24P3IC9:~$ ";
+    char *prompt = "#cisfun$ ";
     char *line = NULL;
     char *ptr_copy = NULL;
     size_t n = 0;
